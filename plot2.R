@@ -2,6 +2,15 @@
 # Course Project 1
 #
 
+# get dataset
+if(!file.exists("household_power_consumption.txt")) {
+  temp <- tempfile()
+  url <- "https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip"
+  download.file(url, temp, method="curl")
+  unzip(temp)
+  unlink(temp)
+}
+
 # loading data
 
 # determining column's classes
